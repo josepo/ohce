@@ -16,7 +16,19 @@ namespace Ohce
 
       public bool IsAPalindrome()
       {
-         return false;
+         bool palindrome = true;
+         int i = 0;
+         int half = _word.Length / 2;
+
+         while (palindrome && (i <= half))
+         {
+            if (_word[i] != _word[_word.Length - (i + 1)])
+               palindrome = false;
+
+            i++;
+         }
+
+         return palindrome;
       }
 
       public override string ToString()
