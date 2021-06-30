@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Ohce
 {
    public class Word
@@ -11,7 +13,7 @@ namespace Ohce
 
       public Word Reverse()
       {
-         return new Word(_word);
+         return new Word(new string(_word.Reverse().ToArray()));
       }
 
       public bool IsAPalindrome()
